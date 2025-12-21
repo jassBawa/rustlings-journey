@@ -10,10 +10,15 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+
+    // (1..=num).fold(1, |acc, x| acc * x)
+    (1..=num).product()
 }
 
 fn main() {
     // You can optionally experiment here.
+    let fact = factorial(4);
+    println!("fact -----> {fact}")
 }
 
 #[cfg(test)]
